@@ -2,7 +2,7 @@
 <img src="branding/network_homebridge.png" width="500px">
 </p>
 
-# homebridge-network-presence
+# homebridge-opnsense-presence
 
 
 [Homebridge](https://github.com/homebridge/homebridge) plugin that provides occupancy sensors for devices presence on your network based on mac address or IP.
