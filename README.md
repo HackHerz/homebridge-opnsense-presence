@@ -54,8 +54,6 @@ With this plugin you can easily configure devices to monitor based on their mac 
 
 ### Configurations Table
 
-\* advanced details below
-
 |             Parameter            |                       Description                       |  Default |   type   |
 | -------------------------------- | ------------------------------------------------------- |:--------:|:--------:|
 | `platform`  | always `"OpnsensePresence"` |     -    |  String  |
@@ -84,5 +82,5 @@ if you want to even speed up the process, you can add `"debug": true` to your co
 
 ## Support homebridge-opnsense-presence
 
-**homebridge-network-presence** is a free plugin under the MIT license. it was developed as a contribution to the homebridge/hoobs community with lots of love and thoughts.
+**homebridge-opnsense-presence** is a free plugin under the MIT license. it was developed as a contribution to the homebridge/hoobs community with lots of love and thoughts.
 Creating and maintaining Homebridge plugins consume a lot of time and effort and if you would like to share your appreciation, feel free to "Star".
