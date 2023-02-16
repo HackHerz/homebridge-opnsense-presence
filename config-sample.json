@@ -1,11 +1,13 @@
 {
     "platforms": [
         {
-            "platform": "NetworkPresence",
+            "platform": "OpnsensePresence",
             "interval": 10,
             "threshold": 15,
             "anyoneSensor": true,
-            "addressRange": "10.0.0.0/24",
+			"routerDomain": "https://myrouter/",
+			"routerKey": "blahvkey",
+			"routerSecret": "verysecret",
             "devices": [ 
                 {
                     "name": "my iPhone",
@@ -20,7 +22,6 @@
                     "name": "my Apple Watch",
                     "hostname": "joes-applewatch.local"
                 }
-
             ],
             "debug": false
         }

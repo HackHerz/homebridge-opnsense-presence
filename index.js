@@ -1,11 +1,11 @@
 const Network = require('./lib/network')
-const PLUGIN_NAME = 'homebridge-network-presence'
-const PLATFORM_NAME = 'NetworkPresence'
+const PLUGIN_NAME = 'homebridge-opnsense-presence'
+const PLATFORM_NAME = 'OpnsensePresence'
 module.exports = (api) => {
-	api.registerPlatform(PLUGIN_NAME, PLATFORM_NAME, NetworkPresence)
+	api.registerPlatform(PLUGIN_NAME, PLATFORM_NAME, OpnsensePresence)
 }
 
-class NetworkPresence {
+class OpnsensePresence {
 
 	constructor(log, config, api) {
 		this.api = api
@@ -21,7 +21,9 @@ class NetworkPresence {
 		this.anyoneSensor = config.anyoneSensor
 		this.devicesConfig = config.devices || []
 		this.debug = config.debug || false
-		this.range = config.addressRange || ''
+		this.routerDomain = config.routerDomain
+		this.routerKey = config.routerKey
+		this.routerSecret = config.routerSecret
 
 		
 		// define debug method to output debug logs when enabled in the config
@@ -37,7 +39,6 @@ class NetworkPresence {
 		}
 
 		this.api.on('didFinishLaunching', Network.init.bind(this))
-
 	}
 
 	configureAccessory(accessory) {

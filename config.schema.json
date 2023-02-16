@@ -1,9 +1,9 @@
 {
-  "pluginAlias": "NetworkPresence",
+  "pluginAlias": "OpnsensePresence",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "Homebridge plugin that provides occupancy sensors for devices presence in your network",
-  "footerDisplay": "Created by @nitaybz",
+  "headerDisplay": "Homebridge plugin that provides occupancy sensors for devices presence in your network using OPNsense",
+  "footerDisplay": "Created by @hackherz",
   "schema": {
       "type": "object",
       "properties": {
@@ -38,13 +38,27 @@
               "default": false,
               "required": false
           },
-          "addressRange": {
-              "title": "Address Range",
-              "description": "Define the address range of your devices to speed up discovery (e.g. \"10.0.0.0/24\", \"10.0.0.1-10.0.0.30\")",
-              "type": "string",
-              "default": "",
-              "required": false
-          },
+		  "routerDomain": {
+			"title": "OPNsense Domain",
+			"description": "Domain for the API access of the router, (e.g. https://myrouter.local/)",
+			"type": "string",
+			"default": "",
+			"required": true
+		  },
+		  "routerKey": {
+			"title": "OPNsense API Key",
+			"description": "OPNsense API Key. User requires ARP Table privileges.",
+			"type": "string",
+			"default": "",
+			"required": true
+		  },
+		  "routerSecret": {
+			"title": "OPNsense API Secret",
+			"description": "OPNsense API Secret",
+			"type": "string",
+			"default": "",
+			"required": true
+		  },
           "devices": {
               "type": "array",
               "items": {
