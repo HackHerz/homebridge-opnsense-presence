@@ -116,6 +116,15 @@
   },
     "layout": [
       {
+        "key": "routerDomain"
+      },
+      {
+        "key": "routerKey"
+      },
+      {
+        "key": "routerSecret"
+      },
+      {
         "key": "interval"
       },
       {
@@ -123,9 +132,6 @@
       },
       {
         "key": "anyoneSensor"
-      },
-      {
-        "key": "addressRange"
       },
       {
         "key": "devices",
